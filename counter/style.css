@@ -81,7 +81,7 @@ body {
     bottom: -88px;
   }
   100% {
-    bottom: 1400px;
+    bottom: 100%;
   }
 }
 
@@ -135,6 +135,7 @@ body {
 
 .styledButton {
   background-color: white;
+  color: black;
   padding: 0.6rem;
   border: 1px lightgray solid;
   border-radius: 0.6rem;
