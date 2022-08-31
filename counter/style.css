@@ -1,33 +1,142 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background: rgb(204,61,244);
-    background: linear-gradient(180deg, rgba(204,61,244,1) 0%, rgba(89,191,222,1) 100%);
+  background: rgb(214, 80, 255);
+  background: linear-gradient(
+    0deg,
+    rgba(214, 80, 255, 1) 0%,
+    rgba(18, 6, 148, 1) 21%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-#container {
-    height: 100vh;
-    display: grid;
-    grid-template-columns: auto;
-    justify-content: center;
-    align-items: center;
+.container {
+  position: relative;
+  overflow-y: hidden;
 }
 
-.titleText {
-    padding-top: 40px;
-    text-align: center;
-}
-
-.titleText, .counterNumber {
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    text-shadow: 0 0 20px black;
+#gridContainer {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: auto;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
 }
 
 .counterNumber {
-    font-size: 24em;
+  font-size: 22rem;
+  color: white;
+  text-shadow: 0 0 20px black;
+  z-index: 2;
+}
+
+#rocket-ship {
+  position: absolute;
+  bottom: -89px;
+  left: 47%;
+  z-index: 3;
+}
+
+#smoke {
+  position: absolute;
+  z-index: 2;
+  width: 200px;
+  bottom: -80px;
+  left: 40%;
+  opacity: 0;
+}
+
+#smoke img {
+  max-width: 100%;
+}
+
+.liftoff {
+  animation: liftoff-path ease-in 4s;
+  animation-fill-mode: forwards;
+}
+
+.smoke-launch {
+  animation: smoke-billow ease-out 3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes liftoff-path {
+  0% {
+    bottom: -88px;
+  }
+  100% {
+    bottom: 1400px;
+  }
+}
+
+@keyframes smoke-billow {
+  0% {
+    bottom: -80px;
+    width: 100px;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    bottom: -180px;
+    width: 600px;
+    opacity: 0;
+  }
+}
+
+.transparent-input {
+  padding: 1rem;
+  position: absolute;
+  z-index: 3;
+  background-color: aliceblue;
+  opacity: 0.6;
+  color: black;
+  border-radius: 1rem;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 0 10px white;
+}
+
+#countdownSettings {
+  top: 10px;
+  left: 10px;
+}
+
+#changeSettingsDuringCountdown {
+  top: 10px;
+  right: 10px;
+}
+
+.inputField {
+  padding: 0.6rem;
+  font-size: 2rem;
+  text-align: center;
+  width: 100px;
+  border: 1px lightgray solid;
+  border-radius: 0.4rem;
+}
+
+.styledButton {
+  background-color: white;
+  padding: 0.6rem;
+  border: 1px lightgray solid;
+  border-radius: 0.6rem;
+  margin-top: 1rem;
+}
+
+.styledButton:hover {
+  color: lightgray;
+  background-color: lightslategray;
+  border: 1px slategray solid;
+}
+
+.hideElement {
+  display: none;
 }
