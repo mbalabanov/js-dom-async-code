@@ -59,8 +59,6 @@ function increaseSeconds() {
         setTimeout(function () {
             document.getElementById('increaseSeconds').removeAttribute('disabled')
             document.getElementById('decreaseSeconds').removeAttribute('disabled')
-            console.log(typeof increasedValue)
-            console.log(increasedValue)
             runCountdown(increasedValue)
         }, 1000);
     }
@@ -77,8 +75,7 @@ function decreaseSeconds() {
         setTimeout(function () {
             document.getElementById('increaseSeconds').removeAttribute('disabled')
             document.getElementById('decreaseSeconds').removeAttribute('disabled')
-            console.log(typeof decreasedValue)
-            runCountdown(decreasedValue)
+            runCountdown(decreasedValue - 1)
         }, 1000);
     }
 }
