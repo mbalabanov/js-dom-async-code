@@ -27,8 +27,15 @@
             <img src="assets/smoke.png" alt="smoke">
         </div>
         <form action="#" class="transparent-input" id="countdownSettings">
+            <h1>Countdown to Rocket Launch</h1>
+            <p class="instructions"><strong>Instructions:</strong></p>
+            <p class="instructions"></p>Set the number of seconds for the countdown in the field below and click on
+            "Start Countdown". Once the countdown has commenced, you a control panel on the right side will open and you
+            can increase or decrease the number of seconds.</p>
+            <p class="instructions">After the launch is complete you can click on "Reset" to clear all settings and
+                prepare a new launch.</p>
             <h2>Countdown Settings</h2>
-            <p><label for="fname">Seconds to countdown:</label></p>
+            <p><label for="seconds">Seconds to countdown:</label></p>
             <p><input type="text" id="countDownSeconds" name="seconds" value="10" class="inputField"></p>
             <p><button type="submit" class="styledButton" id="submitButton">Start Countdown</button></p>
             <p><button type="button" class="styledButton" id="resetButton">Reset</button></p>
@@ -39,7 +46,7 @@
             <p><button type="button" class="styledButton" id="decreaseSeconds">&darr; Decrease Seconds</button></p>
         </div>
     </div>
-    
+
     <script src="counter.js"></script>
 </body>
 
