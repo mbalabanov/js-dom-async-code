@@ -10,6 +10,7 @@ function setupApp() {
     document.getElementById('changeSettingsDuringCountdown').setAttribute('class', 'transparent-input hideElement')
     document.getElementById('resetButton').setAttribute('class', 'styledButton hideElement')
     document.getElementById('rocket-ship').classList.remove('liftoff')
+    COUNTER_AREA.classList.remove('flashing')
     document.getElementById('smoke-left').classList.remove('smoke-launch')
     document.getElementById('smoke-right').classList.remove('smoke-launch')
 
@@ -39,6 +40,7 @@ function runCountdown(totalSeconds) {
         if (totalSeconds <= 0) {
             clearInterval(SECONDS_COUNTER)
             totalSeconds = 'Liftoff!'
+            COUNTER_AREA.setAttribute('class', 'flashing')
             document.getElementById('rocket-ship').setAttribute('class', 'liftoff')
             document.getElementById('smoke-left').setAttribute('class', 'smoke-launch')
             document.getElementById('smoke-right').setAttribute('class', 'smoke-launch')

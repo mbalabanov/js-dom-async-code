@@ -85,6 +85,11 @@ body {
   }
 }
 
+.flashing {
+  animation: flashing-tween ease-in-out 4s;
+  animation-fill-mode: forwards;
+}
+
 @keyframes smoke-billow {
   0% {
     bottom: -80px;
@@ -98,6 +103,42 @@ body {
     bottom: -180px;
     width: 600px;
     opacity: 0;
+  }
+}
+
+@keyframes flashing-tween {
+  0% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
